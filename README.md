@@ -6,16 +6,7 @@ I study geology and use computational tools to explore knowledge, research, and 
 
 ## Development Activity
 
-[View my GitHub contribution activity →](https://github.com/alanfloyd-dev?tab=overview)
-
-<!--
-GitHub displays its native contribution graph below this profile README.
-Private contributions can appear there when "Include private contributions on
-my profile" is enabled in profile settings.
-
-External statistics cards were intentionally omitted because third-party image
-services can be rate-limited or unavailable, leaving broken images in the README.
--->
+Building software tools, documenting knowledge, and exploring scientific computing.
 
 ## Public Projects
 
