@@ -6,14 +6,15 @@ I study geology and use computational tools to explore knowledge, research, and 
 
 ## Development Activity
 
-![GitHub statistics](https://github-readme-stats.vercel.app/api?username=alanfloyd-dev&show_icons=true&hide_title=true&hide_border=true&include_all_commits=true&count_private=true&theme=transparent)
-
-![Contribution activity](https://github-readme-activity-graph.vercel.app/graph?username=alanfloyd-dev&hide_border=true&theme=github-compact)
+[View my GitHub contribution activity →](https://github.com/alanfloyd-dev?tab=overview)
 
 <!--
-Private contributions can appear in GitHub's native contribution graph when
-"Include private contributions on my profile" is enabled in profile settings.
-Third-party widgets may not be able to access all private activity.
+GitHub displays its native contribution graph below this profile README.
+Private contributions can appear there when "Include private contributions on
+my profile" is enabled in profile settings.
+
+External statistics cards were intentionally omitted because third-party image
+services can be rate-limited or unavailable, leaving broken images in the README.
 -->
 
 ## Public Projects
@@ -46,11 +47,14 @@ Only publish these entries after their repositories are public.
 
 ## About
 
-- Studying **geology**, with a long-term interest in **paleontology and Earth sciences research**
-- Exploring **scientific computing** and **data analysis**
-- Interested in thoughtful, sustainable **open-source software**
-- Building systems for **learning, research, and knowledge management**
-- Working with Python, Rust, C#, Vue, FastAPI, MySQL, and Linux
+- Studying geology with a long-term interest in paleontology and Earth sciences
+- Exploring scientific computing and data-driven research
+- Building tools for learning, research, and knowledge management
+- Interested in open-source software and reproducible workflows
+
+### Tools
+
+Python · Rust · C# · Vue · FastAPI · MySQL · Linux
 
 ## Links
 
