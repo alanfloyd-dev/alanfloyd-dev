@@ -1,0 +1,74 @@
+name: Generate contribution snake
+
+on:
+  schedule:
+    # Daily at 02:17 UTC (10:17 Asia/Shanghai).
+    - cron: '17 2 * * *'
+  workflow_dispatch:
+  push:
+    branches: [main]
+
+permissions:
+  contents: write
+
+# Serialize publishers; output branch pushes do not trigger this workflow.
+concurrency:
+  group: contribution-snake-output
+  cancel-in-progress: false
+
+jobs:
+  generate:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - name: Check out repository
+        uses: actions/checkout@v6
+
+      - name: Generate light and dark SVGs
+        uses: Platane/snk@v3
+        with:
+          github_user_name: ${{ github.repository_owner }}
+          outputs: |
+            dist/github-snake.svg?palette=github
+            dist/github-snake-dark.svg?palette=github-dark
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Publish SVGs to output branch
+        shell: bash
+        run: |
+          set -euo pipefail
+          test -s dist/github-snake.svg
+          test -s dist/github-snake-dark.svg
+
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+
+          # A separate index keeps the checked-out main branch untouched.
+          # Seed it from output when present, preserving unrelated files/history.
+          index_dir=$(mktemp -d)
+          export GIT_INDEX_FILE="$index_dir/index"
+          remote_output=$(git ls-remote --heads origin refs/heads/output)
+          parent_args=()
+          if [[ -n "$remote_output" ]]; then
+            git fetch --no-tags origin refs/heads/output
+            parent=$(git rev-parse FETCH_HEAD)
+            git read-tree "$parent"
+            parent_args=(-p "$parent")
+          else
+            git read-tree --empty
+          fi
+
+          for file in github-snake.svg github-snake-dark.svg; do
+            blob=$(git hash-object -w "dist/$file")
+            git update-index --add --cacheinfo "100644,$blob,$file"
+          done
+          tree=$(git write-tree)
+          if [[ -n "$remote_output" ]] && [[ "$tree" == "$(git rev-parse "$parent^{tree}")" ]]; then
+            echo 'SVGs unchanged; no commit needed.'
+            exit 0
+          fi
+
+          commit=$(git commit-tree "$tree" "${parent_args[@]}" -m 'Update contribution snake')
+          # Normal push: never force-overwrite a concurrent remote update.
+          git push origin "$commit:refs/heads/output"
