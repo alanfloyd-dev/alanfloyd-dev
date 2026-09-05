@@ -23,16 +23,29 @@ jobs:
     steps:
       - name: Check out repository
         uses: actions/checkout@v6
+        with:
+          # Only the built-in repository token authenticates Git fetch/push.
+          token: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Require contribution data token
+        shell: bash
+        env:
+          SNAKE_GITHUB_TOKEN: ${{ secrets.SNAKE_GITHUB_TOKEN }}
+        run: |
+          if [[ -z "$SNAKE_GITHUB_TOKEN" ]]; then
+            echo '::error::Create the SNAKE_GITHUB_TOKEN repository secret before running this workflow.'
+            exit 1
+          fi
 
       - name: Generate light and dark SVGs
         uses: Platane/snk@v3
         with:
           github_user_name: ${{ github.repository_owner }}
+          # Personal read token is scoped to contribution generation, never Git publishing.
+          github_token: ${{ secrets.SNAKE_GITHUB_TOKEN }}
           outputs: |
             dist/github-snake.svg?palette=github
             dist/github-snake-dark.svg?palette=github-dark
-        env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
       - name: Publish SVGs to output branch
         shell: bash
