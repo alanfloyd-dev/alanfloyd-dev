@@ -20,10 +20,6 @@ I study geology and use computational tools to explore knowledge, research, and 
 - Building tools for learning, research, and knowledge management
 - Interested in open-source software and reproducible workflows
 
-### Tools
-
-Python · Rust · C# · Vue · FastAPI · MySQL · Linux
-
 <p align="center">
   <img src="assets/fieldwork/fieldwork-01.jpg" alt="Dog with a geological hammer and compass on red rock" width="24%" />
   <img src="assets/fieldwork/fieldwork-02.jpg" alt="Rock outcrop with a geological hammer for scale" width="24%" />
@@ -35,32 +31,78 @@ Python · Rust · C# · Vue · FastAPI · MySQL · Linux
 
 ### Scientific Computing
 
-<p>
-  <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@v2.17.0/icons/python/python-original.svg" alt="Python" title="Python" width="48" height="48" />
-  <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@v2.17.0/icons/numpy/numpy-original.svg" alt="NumPy" title="NumPy" width="48" height="48" />
-  <picture>
-    <source media="(prefers-color-scheme: dark)" srcset="https://cdn.simpleicons.org/pandas/F0F6FC" />
-    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@v2.17.0/icons/pandas/pandas-original.svg" alt="Pandas" title="Pandas" width="48" height="48" />
-  </picture>
-  <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@v2.17.0/icons/matplotlib/matplotlib-original.svg" alt="Matplotlib" title="Matplotlib" width="48" height="48" />
-</p>
+<table>
+  <tr>
+    <td align="center">
+      <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@v2.17.0/icons/python/python-original.svg" alt="Python" title="Python" width="48" height="48" />
+      <br />
+      <sub>Python</sub>&#8203;
+    </td>
+    <td align="center">
+      <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@v2.17.0/icons/numpy/numpy-original.svg" alt="NumPy" title="NumPy" width="48" height="48" />
+      <br />
+      <sub>NumPy</sub>&#8203;
+    </td>
+    <td align="center">
+      <picture>
+      <source media="(prefers-color-scheme: dark)" srcset="https://cdn.simpleicons.org/pandas/F0F6FC" />
+      <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@v2.17.0/icons/pandas/pandas-original.svg" alt="Pandas" title="Pandas" width="48" height="48" />
+      </picture>
+      <br />
+      <sub>Pandas</sub>&#8203;
+    </td>
+    <td align="center">
+      <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@v2.17.0/icons/matplotlib/matplotlib-original.svg" alt="Matplotlib" title="Matplotlib" width="48" height="48" />
+      <br />
+      <sub>Matplotlib</sub>&#8203;
+    </td>
+  </tr>
+</table>
 
 ### Development & Systems
 
-<p>
-  <picture>
-    <source media="(prefers-color-scheme: dark)" srcset="https://cdn.simpleicons.org/mysql/F0F6FC" />
-    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@v2.17.0/icons/mysql/mysql-original.svg" alt="MySQL" title="MySQL" width="48" height="48" />
-  </picture>
-  <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@v2.17.0/icons/vuejs/vuejs-original.svg" alt="Vue.js" title="Vue.js" width="48" height="48" />
-  <picture>
-    <source media="(prefers-color-scheme: dark)" srcset="https://cdn.simpleicons.org/rust/F0F6FC" />
-    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@v2.17.0/icons/rust/rust-original.svg" alt="Rust" title="Rust" width="48" height="48" />
-  </picture>
-  <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@v2.17.0/icons/c/c-original.svg" alt="C" title="C" width="48" height="48" />
-  <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@v2.17.0/icons/csharp/csharp-original.svg" alt="C#" title="C#" width="48" height="48" />
-  <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@v2.17.0/icons/linux/linux-original.svg" alt="Linux" title="Linux" width="48" height="48" />
-</p>
+<table>
+  <tr>
+    <td align="center">
+      <picture>
+      <source media="(prefers-color-scheme: dark)" srcset="https://cdn.simpleicons.org/mysql/F0F6FC" />
+      <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@v2.17.0/icons/mysql/mysql-original.svg" alt="MySQL" title="MySQL" width="48" height="48" />
+      </picture>
+      <br />
+      <sub>MySQL</sub>&#8203;
+    </td>
+    <td align="center">
+      <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@v2.17.0/icons/vuejs/vuejs-original.svg" alt="Vue.js" title="Vue.js" width="48" height="48" />
+      <br />
+      <sub>Vue.js</sub>&#8203;
+    </td>
+    <td align="center">
+      <picture>
+      <source media="(prefers-color-scheme: dark)" srcset="https://cdn.simpleicons.org/rust/F0F6FC" />
+      <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@v2.17.0/icons/rust/rust-original.svg" alt="Rust" title="Rust" width="48" height="48" />
+      </picture>
+      <br />
+      <sub>Rust</sub>&#8203;
+    </td>
+  </tr>
+  <tr>
+    <td align="center">
+      <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@v2.17.0/icons/c/c-original.svg" alt="C" title="C" width="48" height="48" />
+      <br />
+      <sub>C</sub>&#8203;
+    </td>
+    <td align="center">
+      <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@v2.17.0/icons/csharp/csharp-original.svg" alt="C#" title="C#" width="48" height="48" />
+      <br />
+      <sub>C#</sub>&#8203;
+    </td>
+    <td align="center">
+      <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@v2.17.0/icons/linux/linux-original.svg" alt="Linux" title="Linux" width="48" height="48" />
+      <br />
+      <sub>Linux</sub>&#8203;
+    </td>
+  </tr>
+</table>
 
 ## Public Projects
 
