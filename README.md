@@ -104,9 +104,6 @@ I study geology and use computational tools to explore knowledge, research, and 
   </tr>
 </table>
 
-## Public Projects
-
-Public repositories will be documented here as they become available.
 
 <!--
 Project template:
